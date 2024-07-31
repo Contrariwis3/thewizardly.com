@@ -1,0 +1,38 @@
+.rpgui-content h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+    color: #F8F0D8 !important;
+}
+
+body {
+    color: #6d6d6d;
+
+    background: url("img/nebula.png") bottom;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+#navigation {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.centered {
+    position: relative;
+    min-width: 740px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rpgui-icon.small {
+    width: 32px;
+    height: 32px;
+}
