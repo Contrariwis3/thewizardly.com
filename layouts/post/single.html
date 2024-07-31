@@ -1,7 +1,11 @@
 {{ define "main" }}
 <div class="rpgui-container framed centered">
-    <h1>{{ .Title }}</h1>
+    {{ partial "article_header.html" . }}
     {{ .Content }}
+
+    {{ if .Site.Params.include_conversation }}
+    <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+    {{ end }}
 
     <p>
         {{ range (.GetTerms "tags") }}
