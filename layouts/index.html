@@ -2,7 +2,19 @@
 {{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
 
 <div class="rpgui-container framed centered">
-    {{ partial "article_header.html" . }}
+    <header>
+        <div class="rpgui-icon small exclamation"></div>
+    
+        {{ if .Title }}
+        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        {{ end }}
+    
+        <a href="{{ .Permalink }}">
+            <time class="dt-published">
+                {{ .Date.Format "2 January 2006" }}
+            </time>
+        </a>
+    </header>
 	{{ .Content }}
 </div>
 
