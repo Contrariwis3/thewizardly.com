@@ -9,6 +9,11 @@ li {
     color: #F8F0D8 !important;
 }
 
+.rpgui-icon.small {
+    width: 32px;
+    height: 32px;
+}
+
 body {
     color: #6d6d6d;
 
@@ -29,9 +34,4 @@ body {
 
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.rpgui-icon.small {
-    width: 32px;
-    height: 32px;
 }
