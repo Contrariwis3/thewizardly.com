@@ -12,7 +12,7 @@ li {
 body {
     color: #6d6d6d;
 
-    background: url("img/nebula.png") bottom;
+    background: url("/img/nebula.png") bottom;
     background-repeat: repeat;
     overflow: hidden;
 }
