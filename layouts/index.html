@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
+
+{{ if (ne $index 0) }}
+<hr>
+{{ end }}
+
+<article>
+	{{ partial "article_header.html" . }}
+	{{ .Content }}
+</article>
+
+{{ end }}
+{{ partial "pagination.html" .}}
+{{ end }}
