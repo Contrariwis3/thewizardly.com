@@ -9,9 +9,7 @@
     <div id="content" class="rpgui-content">
         {{ partial "header.html" . }}
 
-        <div class="rpgui-container framed centered">
-            {{ block "main" . }}{{ end }}
-        </div>
+        {{ block "main" . }}{{ end }}
 
         {{ partial "footer.html" . }}
         {{ partial "custom_footer.html" . }}

@@ -1,14 +1,10 @@
 {{ define "main" }}
 {{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
 
-{{ if (ne $index 0) }}
-<hr>
-{{ end }}
-
-<article>
-	{{ partial "article_header.html" . }}
+<div class="rpgui-container framed centered">
+    {{ partial "article_header.html" . }}
 	{{ .Content }}
-</article>
+</div>
 
 {{ end }}
 {{ partial "pagination.html" .}}
