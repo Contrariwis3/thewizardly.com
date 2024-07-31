@@ -209,7 +209,6 @@ inside your html file.
   left: 0px;
   top: 0px;
   position: fixed;
-  overflow: hidden;
   font-size: 0.8em; }
 
 /* general rules to apply on anything inside the content */
@@ -219,14 +218,6 @@ inside your html file.
   /* prevent dragging */
   user-drag: none;
   -webkit-user-drag: none;
-  /* prevent text selecting */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
   /* pixelated enlargement filter (to keep the pixel-art style when enlarging pictures) */
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -webkit-optimize-contrast;
