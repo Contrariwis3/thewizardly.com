@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
     {{ partial "head.html" . }}
-    <body>
+</head>
+
+<body>
+    <div id="content" class="rpgui-content">
         {{ partial "header.html" . }}
         {{ block "main" . }}{{ end }}
         {{ partial "footer.html" . }}
-		{{ partial "custom_footer.html" . }}
-    </body>
+        {{ partial "custom_footer.html" . }}
+    </div>
+</body>
+
 </html>
