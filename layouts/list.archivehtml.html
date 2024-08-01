@@ -6,7 +6,7 @@
 <div class="rpgui-container framed centered">
 	<h3>Categories</h3>
 	{{ range $list }}
-	<p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+	<a href="{{ .Permalink }}">#{{ .Title }}</a>
 	{{ end }}
 </div>
 
