@@ -1,13 +1,13 @@
-.rpgui-content h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li {
-    color: #F8F0D8 !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.rpgui-content p {
+    font-size: 1.2em;
+  
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 .rpgui-icon.small {
     width: 32px;
