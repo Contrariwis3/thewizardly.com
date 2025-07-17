@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霓虹武士道 • Neon Bushido Burgers</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(45deg, #1a0033, #000066, #330066, #001133);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            color: #ff00ff;
+            font-family: 'Orbitron', monospace;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 30px #00ffff, inset 0 0 30px rgba(0, 255, 255, 0.1);
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0080, #8000ff);
+            border-radius: 10px;
+            z-index: -1;
+            animation: borderGlow 2s linear infinite;
+        }
+        
+        @keyframes borderGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .japanese-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.5rem;
+            color: #00ffff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #ff0080;
+            text-shadow: 0 0 10px #ff0080;
+            font-style: italic;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-item {
+            padding: 12px 25px;
+            background: rgba(255, 0, 255, 0.2);
+            border: 1px solid #ff00ff;
+            text-decoration: none;
+            color: #00ffff;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .nav-item:hover {
+            background: rgba(0, 255, 255, 0.3);
+            box-shadow: 0 0 20px #00ffff;
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .main-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .post {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #ff0080;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(255, 0, 128, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 0, 128, 0.5);
+        }
+        
+        .post-title {
+            font-size: 1.8rem;
+            color: #00ffff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        
+        .post-meta {
+            color: #ff00ff;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .post-content {
+            line-height: 1.6;
+            color: #ccccff;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .widget {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ffff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+        
+        .widget-title {
+            font-size: 1.3rem;
+            color: #ff00ff;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+            color: #ccccff;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .price {
+            color: #00ff00;
+            font-weight: bold;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        
+        .honor-code {
+            background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ff0080;
+            text-align: center;
+            font-style: italic;
+            color: #ffccff;
+        }
+        
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .floating-burger {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+        
+        .floating-burger:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-burger:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-burger:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-overlay"></div>
+    <div class="floating-elements">
+        <div class="floating-burger">🍔</div>
+        <div class="floating-burger">🍔</div>
+        <div class="floating-burger">🍔</div>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="title">NEON BUSHIDO BURGERS</h1>
+            <div class="japanese-title">霓虹武士道バーガー</div>
+            <p class="tagline">Honor • Beef • Synthwave • Profit</p>
+        </header>
+        
+        <nav class="nav">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Menu</a>
+            <a href="#" class="nav-item">Honor Code</a>
+            <a href="#" class="nav-item">Territory</a>
+            <a href="#" class="nav-item">Contact</a>
+        </nav>
+        
+        <div class="content">
+            <main class="main-posts">
+                <article class="post">
+                    <h2 class="post-title">The Way of the Burger: A New Chapter</h2>
+                    <div class="post-meta">Posted by Oyabun Takeshi | January 15, 2025 | Filed under: Business Updates</div>
+                    <div class="post-content">
+                        <p>My brothers and sisters of the neon-lit streets, today marks a historic moment for our family. After much contemplation beneath the glow of city lights and the hum of synthesizers, we have decided to pivot our operations towards a more... legitimate enterprise.</p>
+                        
+                        <p>The hamburger business calls to us like the synthesized melodies of our youth. There is honor in feeding the hungry, profit in quality ingredients, and beauty in the perfect beef patty seared to perfection. We shall approach this venture with the same dedication and precision that has made our family legendary.</p>
+                        
+                        <p>Our signature "Yakuza Deluxe" burger launches next week. Prepared with the reverence of a tea ceremony, served with the efficiency of a well-planned operation. 🍔⚡</p>
+                    </div>
+                </article>
+                
+                <article class="post">
+                    <h2 class="post-title">New Supplier Negotiations: The Wagyu Connection</h2>
+                    <div class="post-meta">Posted by Lieutenant Hiroshi | January 12, 2025 | Filed under: Supply Chain</div>
+                    <div class="post-content">
+                        <p>After weeks of careful negotiation conducted in the back booths of retro diners, we have secured an exclusive deal with premium Wagyu suppliers. The negotiations were intense - almost as intense as our old territorial disputes, but significantly more delicious.</p>
+                        
+                        <p>Quality is not negotiable. Every patty must meet our exacting standards. Failure to deliver perfection will result in... strongly worded Yelp reviews.</p>
+                    </div>
+                </article>
+                
+                <article class="post">
+                    <h2 class="post-title">Code of the Kitchen: Our New Honor System</h2>
+                    <div class="post-meta">Posted by Elder Kenji | January 10, 2025 | Filed under: Philosophy</div>
+                    <div class="post-content">
+                        <p>The way of the warrior adapts to changing times. Where once we ruled through fear, now we shall conquer through flavor. Our new code emphasizes customer satisfaction, food safety, and maintaining that aesthetic vibe that makes our restaurant unforgettable.</p>
+                        
+                        <p>Remember: A burger prepared without passion is worse than no burger at all. Cook with honor, serve with pride, and always keep the synthwave playing.</p>
+                    </div>
+                </article>
+            </main>
+            
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3 class="widget-title">🍔 TODAY'S MENU</h3>
+                    <div class="menu-item">
+                        <span>Yakuza Deluxe</span>
+                        <span class="price">¥2,500</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Neon Dragon Roll Burger</span>
+                        <span class="price">¥2,200</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Synthwave Special</span>
+                        <span class="price">¥1,800</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Honor Code Combo</span>
+                        <span class="price">¥3,000</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Family Business Fries</span>
+                        <span class="price">¥800</span>
+                    </div>
+                </div>
+                
+                <div class="widget">
+                    <h3 class="widget-title">⚡ QUICK STATS</h3>
+                    <div style="color: #ccccff; line-height: 1.8;">
+                        <p><strong>Burgers Served This Week:</strong> 847</p>
+                        <p><strong>Customer Satisfaction:</strong> 98.7%</p>
+                        <p><strong>Health Inspector Rating:</strong> A+</p>
+                        <p><strong>Neon Lights Functioning:</strong> 100%</p>
+                        <p><strong>Synthwave Playlist:</strong> 🔊 Always On</p>
+                    </div>
+                </div>
+                
+                <div class="widget honor-code">
+                    <h3 class="widget-title">🗾 BUSHIDO BURGER CODE</h3>
+                    <p>"We cook with honor, serve with respect, and always remember that a satisfied customer is worth more than any territory."</p>
+                    <br>
+                    <p style="font-size: 0.8rem;">- Ancient Yakuza Proverb (Revised for Food Service, 2025)</p>
+                </div>
+                
+                <div class="widget">
+                    <h3 class="widget-title">📍 FIND US</h3>
+                    <div style="color: #ccccff; line-height: 1.8;">
+                        <p><strong>Shibuya District</strong><br>
+                        Neon Alley, Building 88<br>
+                        Open: 18:00 - 04:00<br>
+                        (Peak neon hours)</p>
+                        <br>
+                        <p style="font-size: 0.9rem; color: #ff00ff;">🎵 Synthwave ambiance guaranteed</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
