@@ -25,12 +25,99 @@
 	  <div class="h-entry">
 		
 
+		<a href="https://thewizardly.com/2026/02/12/for-reasons-that-defy-explanation/" class="u-url"><time class="dt-published" datetime="2026-02-12 07:28:45 -0600">Feb 12, 2026</time></a>
+
+		<div class="e-content">
+			 <p>For reasons that defy explanation I’ve been watching a lot of Disney channel this weekz They happen to be running a <a href="https://en.wikipedia.org/wiki/Zombies_(2018_film)">Zombies</a> marathon.</p>
+<p>The cartoon is weirdly compelling. I may become the world’s foremost adult expert on the Zombies mythos.</p>
+<p>There’s a giant grasshopper and its name is Mr Paddlesticks.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://thewizardly.com/2026/02/01/a-brief-history-of-my/">A Brief History of my Readwise Enrichment Pipeline</a></h1>
+		
+
+		<a href="https://thewizardly.com/2026/02/01/a-brief-history-of-my/" class="u-url"><time class="dt-published" datetime="2026-02-01 11:26:09 -0600">Feb 1, 2026</time></a>
+
+		<div class="e-content">
+			 <p>I read a lot. Like. A lot a lot.</p>
+<p>And most of it is through an app called <a href="https://readwise.io/read">Readwise Reader</a>. (Not an affiliate link. Possibly not even a recommendation. More on that maybe later?)</p>
+<p>Without getting too deep down the rabbit hole, I think it’s the best currently available solution to the me-shaped set of problems, but I don’t find it delightful and I would abandon them the instant a better app came along.</p>
+<p>That said, a better app hasn’t come along, doesn’t appear to be on the horizon, and the Reader app has been slowly getting better at my specific use cases for a couple years now. So it’s probably where I’m going to be for the foreseeable future.</p>
+<p>I’m going to hand wave a lot of complexity about how I actually use Readwise because it’s not the point of the present conversation. The important thing to know is that eventually, through dark and internecine processes, some subset of documents come to their final rest in my Readwise archive.</p>
+<h3 id="i-was-going-to-do-a-header-thing-based-on-genesis-but-i-think-ive-already-done-that-at-least-twice-but-you-know-what-its-my-blog-aint-nobody-gonna-tell-me-to-stop-making-bible-jokes-so-anyway">I was going to do a header thing based on Genesis but I think I’ve already done that at least twice but you know what? It’s my blog. Ain’t nobody gonna tell me to stop making bible jokes. So anyway&hellip;</h3>
+<h3 id="first-there-was-step-functions-and-it-was-okay">First, there was Step Functions, and it was&hellip; Okay?</h3>
+<h4 id="wait">Wait.</h4>
+<p><strong>fuck.</strong></p>
+<h4 id="is-this-going-to-make-any-sense-if-i-dont-explain-what-it-was-i-was-even-trying-to-do-when-i-built-the-thing">Is this going to make any sense if I don’t explain what it was I was even trying to do when I built the thing?</h4>
+<h3 id="okay-so-for-realsie-reals-first-there-was-the-what-was-i-even-trying-to-do-actually">Okay. So for realsie reals. First, there was the “what was I even trying to do, actually?”</h3>
+<p>My first Read it Later app was Instapaper. And it was also fine. In some ways it was better. And I was glad to pay like, what, $20/yr? Then they decided to more than double the price to add nebulous “AI Features” at a time when I was not yet sold on the value of AI as a thing I would pay double for.</p>
+<p>(Side note, I still won’t pay double for it. This may be hubris but I suspect I am better at building AI features than you, for any company whose main thing isn’t building AI features. Just give me an API or at least a way to bring my own keys and stop trying to charge me double for things I didn’t ask to buy.)</p>
+<p>So, incensed, I migrated to Readwise Reader. Who also had AI features. Which were legitimately awful at the time. (Sorry Readwise folks. It’s true. And I emailed you about it. And your features got better, which I appreciate. And you let me bring my own key, which I also appreciate. So thank you.)</p>
+<p>And the important thing about that is the way Instapaper worked was everything I read ended up in my Instapaper archive, which meant at least a few years of backlogged “I looked at this, it was interesting,” was sitting in there. Would I ever look at any of it again? Turns out, benefit of hindsight, no. I wouldn’t. But all of that baggage came along when I exported Instapaper into Readwise.</p>
+<p>How on earth was I going to separate the signal from the noise?</p>
+<h3 id="so-i-built-an-enrichment-pipeline">So I built an Enrichment Pipeline</h3>
+<p>The basic idea was simple. Take the archived file, get ChatGPT to generate a summary of it. Use the summaries to determine what I wanted to keep. Because ain’t no way I was ever going to re-read all 500+ documents to do that myself. (<em>narrator</em>: this is foreshadowing.)</p>
+<p>I explained a lot of this <a href="https://thewizardly.com/2025/05/02/a-personal-interest-rubric/">here</a>.</p>
+<p>V1 ran on AWS Step Functions, output markdown to S3, which I used rclone to move into my Obsidian vault. And it was fine, except that I did a horrible job of ever actually <strong>looking</strong> at any of those markdown files. Not never. But not as often as I intended.</p>
+<p>Turns out I had a lot of other mountains to move before I would be in a space (emotionally, mentally, physically,) that would let me start to get value from them.</p>
+<p>And then I got there. And then I realized. Dumping all that into my Obsidian vault wasn’t actually the play. But I needed to do that, and work with them to understand my real needs, my real constraints. So it was a valuable learning experience.</p>
+<p>This is a recurring theme, and a methodology I stand by. Stop worrying about building the right thing. If it’s not obvious what that is, build <em>anything</em>, and the right thing will eventually make itself known.</p>
+<h3 id="a-brief-aside-on-digital-sovereignty">A brief aside on Digital Sovereignty</h3>
+<p>I ain’t want Google to own all my data. There. I said it. Or Apple. Or Amazon. Or any of them what thinks they built the future.</p>
+<p>They didn’t build it. <strong>Kids</strong> with <strong>beards</strong> in <strong>computer labs</strong> built it, and then FAANG <strong>stole it</strong> and Google sits on a <em>throne of lies</em> which would be <strong>awesome</strong> if they were still <strong>don’t be evil</strong> about it.</p>
+<p>So you know what? I’m taking all my data and I’m <strong>GOING HOME</strong>. You want to play tetherball? You get your own pole Sergei. You can’t come over and watch cartoons and eat pop tarts with me anymore. And also my dad could beat up your dad. <em>At math.</em></p>
+<h3 id="and-thats-why-i-dont-want-to-play-in-amazons-back-yard">And that’s why I don’t want to play in Amazon’s back yard</h3>
+<p>Which meant I needed to get my enrichment pipeline off Step Functions.</p>
+<p>It was fine. It basically worked. But I wanted it to live on my own infrastructure.</p>
+<h3 id="which-begat-v2-n8n--git">Which Begat V2, n8n + git</h3>
+<p>I migrated my python + lambda + step function monstrosity to <a href="https://n8n.io/">n8n</a>, which has a perfectly cromulent <a href="https://docs.n8n.io/hosting/">self-hosted version</a>. Except what I don’t have, even though I know I could, is a self-hosted equivalent to S3. I was going to need to rethink the rclone part. How would I get the enriched files from n8n to my computer?</p>
+<p>Well. You know what else I’m self hosting? <a href="https://forgejo.org/">Forgejo</a>!</p>
+<p>So I set up a repo for my Readwise enrichment, figured out how to get Forgejo to commit the newly-enriched files to a branch and open a pull request for me to review.</p>
+<p>And it worked great for about four days before I noticed that sometimes, for reasons I still don’t understand, Readwise will consider a document “recently updated” and trigger a re-enrichment. And that in so doing, I created a bunch of difficult-to-reconcile changes to files I was potentially actively changing in Obsidian.</p>
+<p>However, because the universe has a sense of irony, I had a long weekend precipitated by a canceled work trip, which meant lots of unplanned time to rethink the entire thing. From scratch.</p>
+<h3 id="which-begat-v3-n8n--readwise-api">Which Begat V3, n8n + Readwise API</h3>
+<p>Remember that part where I said the Readwise Reader product has slowly gotten better? One of the ways it got better in the last six months is they have webhooks now. I didn’t need to pull their API nightly to look for newly-archive documents, I could respond to them nearly immediately.</p>
+<p>You know what else they have? A native Obsidian plugin. That’ll just do the export directly. And is pretty good, actually, assuming that the data you want to enrich actually lives <em>in Readwise.</em> Which it didn’t. Until now.</p>
+<p>You see the thing I had originally started doing with my unexpectedly free long weekend was finally working with some of those files that the V2 pipeline was creating. Putting my own thoughts and ideas in them.</p>
+<p>As I was doing that, I developed a sense of what parts of the enrichment were actually useful. And it turns out, if I tilt my head slightly to the side and squint, I could cram that data back directly into the Reader data model.</p>
+<p>When a document hits my archive, that triggers a webhook which causes my self-hosted n8n to pick it up and ship it to OpenAI to extract the key points. I find this super useful. A bulleted list of 3-5 main points is useful in a document that might take an hour to read.</p>
+<p>It would be strictly better if I generated that list myself, but since I’m usually reading on an iPad mini in situations where it wouldn’t make sense to have a keyboard, the UI/UX on typing that list sucks, actually, and AI is good at this kind of summarization. So I let ChatGPT take a first stab at it.</p>
+<p>I cram that back in the “document note” that every Reader document gets, and which I’ve otherwise never used. Again, because the typing experience on the iPad sucks. Seriously. Great reading device. Do not ask me to input data. No. Shan’t.</p>
+<p>Then, if the document has highlights (and most of them do), I send each individual highlight back to OpenAI to generate a single one or two-word tag based <em>just on the highlight</em>. No additional document context. I attach that tag to the document, because the Readwise Reader API won’t let me attach it to the highlight. I suspect I could through the Readwise API, but it appears that the Readwise API uses a different ID to reference highlights than the Reader API (at least based on documentation) and I think it’d be difficult to bridge that gap, so I don’t.</p>
+<blockquote>
+<p>Hey. Readwise team. You know what would be cool? If the IDs are meant to be the same between the two APIs, document that somewhere. If they’re different, give me an API that will let me turn one into the other. Thx.</p>
+</blockquote>
+<p>The other thing I do is generate a “summary” of each article, but that’s actually something Reader’s built-in AI will do, as long as you give it an OpenAI key. So I do, and it does a good job.</p>
+<p>Now, all I have to do is export the summary, document note, and tags via the Readwise Obsidian plugin, and I get my enriched data with arguably fewer moving parts. And it works great.</p>
+<h3 id="except">Except&hellip;</h3>
+<p>Okay so it’s a webhook now. Which means it’s event driven. Which means the whole process only runs when&hellip; I&hellip; Archive&hellip; <em>Oh no</em>.</p>
+<p>So that’s the other thing I’ve been doing all weekend. According to my time tracking, I spent at least 6 hours yesterday alone. Going through each and every document in my Reader archive and CULLING.</p>
+<p>Remember the not re-reading all 500 documents? Y’all, I’ve culled <strong>so</strong> hard.</p>
+<p>To be fair, that process mostly isn’t re-reading the entire document. But in many cases it’s at least opening and reading the first / last few paragraphs to remind myself what the document was about.</p>
+<p>Fortunately, lots of stuff could just go. At least several tens of documents about COVID that are no longer extremely relevant. Stuff from early AI that’s now been proven or disproven. Interests I’ve moved on from. Let’s say of the 500, probably about 75-100 were easy first-round deletes.</p>
+<p>The rest?</p>
+<p>Open the document. Does it have highlights? Do I find those relevant and interesting? Send it back to the archive.</p>
+<p>Do I remember what it’s about? Does it seem interesting? Maybe send it back for a re-read.</p>
+<p>Delete it if there’s any question. My to-be-read is long, and I trust that things will find me again if I need them.</p>
+<p>I’ve got about a third of the original documents left to go, and a decent system in place. The enrichment pipeline has been working great, and the exports are now landing in my Obsidian vault in a format that I really like, with data I find useful.</p>
+<p>Not bad for a couple extra unplanned weekend days, huh?</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
 		<a href="https://thewizardly.com/2026/01/29/sister-mary-corita-kent-source/" class="u-url"><time class="dt-published" datetime="2026-01-29 14:34:56 -0600">Jan 29, 2026</time></a>
 
 		<div class="e-content">
 			 <p><a href="https://en.wikipedia.org/wiki/Corita_Kent">Sister Mary Corita Kent</a></p>
 <!-- raw HTML omitted -->
-<p><em><a href="https://collection.corita.org/piece/piece/piece/piece/piece/piece/65-33">source</a></em></p>
+<p><em><a href="https://collection.corita.org/piece/65-33">source</a></em></p>
 
 		</div>
 	  </div>
