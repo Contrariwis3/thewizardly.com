@@ -7,10 +7,18 @@
 	"items": [
 		
 			{
+				"id": "http://contrariwise.micro.blog/2026/03/13/stick-your-chest-out-and/",
+				
+				"content_html": "<blockquote>\n<p>“Stick your chest out and go like — fuck it. Let’s try.”<br>\n— Bruce Straley, Co-Founder, Wildflower Interactive @ GDC 2026​​​​​​​​​​​​​​​​</p>\n</blockquote>\n",
+				"content_text": "> “Stick your chest out and go like — fuck it. Let’s try.”  \n— Bruce Straley, Co-Founder, Wildflower Interactive @ GDC 2026​​​​​​​​​​​​​​​​\n",
+				"date_published": "2026-03-13T08:19:25-06:00",
+				"url": "https://thewizardly.com/2026/03/13/stick-your-chest-out-and/"
+			},
+			{
 				"id": "http://contrariwise.micro.blog/2026/03/07/tired-harry-potter-houses-wired/",
 				
-				"content_html": "<p>Tired: Harry Potter houses.</p>\n<p>Wired: Winnie the Pooh characters.</p>\n<p>I’m Owl.</p>\n",
-				"content_text": "Tired: Harry Potter houses.\n\nWired: Winnie the Pooh characters.\n\nI’m Owl.\n",
+				"content_html": "<p>Tired: Harry Potter houses.</p>\n<p>Wired: Winnie the Pooh characters.</p>\n<p>Tag yourself. I’m Owl.</p>\n",
+				"content_text": "Tired: Harry Potter houses.\n\nWired: Winnie the Pooh characters.\n\nTag yourself. I’m Owl.\n",
 				"date_published": "2026-03-07T12:55:20-06:00",
 				"url": "https://thewizardly.com/2026/03/07/tired-harry-potter-houses-wired/"
 			},
