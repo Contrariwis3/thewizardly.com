@@ -7,12 +7,22 @@
 	"items": [
 		
 			{
+				"id": "http://contrariwise.micro.blog/2026/04/05/171909/",
+				
+				"content_html": "<!-- raw HTML omitted -->\n",
+				"content_text": "<img src=\"uploads/2026/7a03a848788247d2a6465902f71d5d15.jpg\" width=\"450\" height=\"600\" alt=\"A close-up of a bronze sculpture with text carved into its surface reading: “I am not asking to be loved. I want to love.” Partial text is also visible at the top (“chas…”) and bottom (“Praised be”). The surface has an organic, textured quality with intertwining forms surrounding the inscribed panel.​​​​​​​​​​​​​​​​\">\n",
+				"date_published": "2026-04-05T17:19:09-05:00",
+				"url": "https://thewizardly.com/2026/04/05/171909/",
+				"tags": ["Those Drawn with a Very Fine Camel's Hair Brush"]
+			},
+			{
 				"id": "http://contrariwise.micro.blog/2026/04/02/contrariwise-is-human-and-can/",
 				
 				"content_html": "<p>Contrariwise is Human and can make mistakes. Please double-check responses.</p>\n",
 				"content_text": "Contrariwise is Human and can make mistakes. Please double-check responses.\n",
 				"date_published": "2026-04-02T13:28:59-05:00",
-				"url": "https://thewizardly.com/2026/04/02/contrariwise-is-human-and-can/"
+				"url": "https://thewizardly.com/2026/04/02/contrariwise-is-human-and-can/",
+				"tags": ["Those That Are Included in This Classification","Those That Tremble as if They Were Mad"]
 			},
 			{
 				"id": "http://contrariwise.micro.blog/2026/03/22/some-thoughts-on-ai/",
