@@ -7,12 +7,21 @@
 	"items": [
 		
 			{
+				"id": "http://contrariwise.micro.blog/2026/05/09/take-my-wench-please-i/",
+				
+				"content_html": "<p>Take my wench… Please!</p>\n<p>I get no fealty. No fealty at all.</p>\n",
+				"content_text": "Take my wench… Please!\n\nI get no fealty. No fealty at all.\n",
+				"date_published": "2026-05-09T12:40:26-05:00",
+				"url": "https://thewizardly.com/2026/05/09/take-my-wench-please-i/"
+			},
+			{
 				"id": "http://contrariwise.micro.blog/2026/05/06/presented-with-the-following-choice/",
 				
 				"content_html": "<p>Presented with the following choice:</p>\n<ol>\n<li>My dream home and working for “the man” forever.</li>\n<li>A trailer park and working for myself at my dream job.</li>\n</ol>\n<p>I pick option #2.</p>\n",
 				"content_text": "Presented with the following choice:\n\n1. My dream home and working for “the man” forever.\n2. A trailer park and working for myself at my dream job.\n\nI pick option #2.\n",
 				"date_published": "2026-05-06T17:53:11-05:00",
-				"url": "https://thewizardly.com/2026/05/06/presented-with-the-following-choice/"
+				"url": "https://thewizardly.com/2026/05/06/presented-with-the-following-choice/",
+				"tags": ["Those That Belong to the Emperor","Those That Have Just Broken a Water Pitcher"]
 			},
 			{
 				"id": "http://contrariwise.micro.blog/2026/04/30/step-three-vibe/",
@@ -70,7 +79,7 @@
 				"id": "http://contrariwise.micro.blog/2026/03/06/122853/",
 				
 				"content_html": "<!-- raw HTML omitted -->\n",
-				"content_text": "<img src=\"uploads/2026/37a03b5d4e96413bb52444d43dc4da67.jpg\" width=\"600\" height=\"450\" alt=\"A bronze and gold decorative plaque mounted on a cream-colored archway at the entrance to Disneyland. The plaque reads: “HERE YOU LEAVE TODAY AND ENTER THE WORLD OF YESTERDAY, TOMORROW AND FANTASY” in raised gold lettering. Through the arch, Main Street U.S.A. is visible, with Victorian-style buildings, trees, and crowds of park guests. The scene is bathed in warm sunlight under a clear blue sky.​​​​​​​​​​​​​​​​\">\n",
+				"content_text": "<img src=\"https://thewizardly.com/uploads/2026/37a03b5d4e96413bb52444d43dc4da67.jpg\" width=\"600\" height=\"450\" alt=\"A bronze and gold decorative plaque mounted on a cream-colored archway at the entrance to Disneyland. The plaque reads: “HERE YOU LEAVE TODAY AND ENTER THE WORLD OF YESTERDAY, TOMORROW AND FANTASY” in raised gold lettering. Through the arch, Main Street U.S.A. is visible, with Victorian-style buildings, trees, and crowds of park guests. The scene is bathed in warm sunlight under a clear blue sky.​​​​​​​​​​​​​​​​\">\n",
 				"date_published": "2026-03-06T13:28:53-05:00",
 				"url": "https://thewizardly.com/2026/03/06/122853/"
 			},
